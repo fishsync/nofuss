@@ -4,10 +4,10 @@
 	"private": true,
 	"scripts": {
 		"dev": "npx tinacms dev -c 'astro dev'",
-		"start": "astro dev",
-		"build": "astro build",
-		"preview": "astro preview",
-		"build:preview": "astro build && astro preview",
+		"start": "npx tinacms dev -c 'astro dev'",
+		"build": "npx tinacms build && astro build",
+		"preview": "astro preview'",
+		"build:preview": "astro preview",
 		"format": "prettier -w --plugin-search-dir=. 'src/**/*.{js,jsx,ts,tsx,astro}'",
 		"astro": "astro"
 	},
