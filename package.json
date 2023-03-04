@@ -3,9 +3,9 @@
 	"version": "1.0.0",
 	"private": true,
 	"scripts": {
-		"dev": "tinacms dev -c 'astro dev'",
-		"start": "tinacms dev && astro dev",
-		"build": "tinacms build && astro build",
+		"dev": "npx tinacms dev -c 'astro dev'",
+		"start": "npx tinacms dev -c 'astro dev'",
+		"build": "npx tinacms build && astro build",
 		"preview": "astro preview'",
 		"build:preview": "astro preview",
 		"format": "prettier -w --plugin-search-dir=. 'src/**/*.{js,jsx,ts,tsx,astro}'",
