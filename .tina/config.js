@@ -33,10 +33,45 @@ export default defineConfig({
 						required: true,
 					},
 					{
+						label: 'Category',
+						name: 'category',
+						type: 'string',
+						options: [
+							{
+								value: 'movies',
+								label: 'Movies',
+							},
+							{
+								value: 'music',
+								label: 'Music',
+							},
+						],
+					},
+					{
 						type: 'rich-text',
 						name: 'body',
 						label: 'Body',
 						isBody: true,
+					},
+					{
+						name: 'draft',
+						label: 'Draft',
+						type: 'boolean',
+					},
+					{
+						label: 'Published',
+						name: 'published',
+						type: 'boolean',
+					},
+					{
+						label: 'Partner',
+						name: 'partner',
+						type: 'boolean',
+					},
+					{
+						label: 'Director',
+						name: 'director',
+						type: 'boolean',
 					},
 				],
 			},
@@ -52,6 +87,11 @@ export default defineConfig({
 						label: 'Title',
 						isTitle: true,
 						required: true,
+					},
+					{
+						label: 'Published',
+						name: 'pubDate',
+						type: 'datetime',
 					},
 					{
 						type: 'string',

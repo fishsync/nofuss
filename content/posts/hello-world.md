@@ -1,5 +1,10 @@
 ---
 title: 'Hello, World!'
+description: A new blog post
+pubDate: 'November 30, 2022'
+published: false
+partner: true
+draft: true
 ---
 
 ## Hello World!
