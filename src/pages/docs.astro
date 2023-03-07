@@ -1,0 +1,28 @@
+---
+import Layout from '@layouts/Layout.astro';
+
+import PrismicContent from '../components/PrismicContent.astro';
+import PrismicText from '../components/PrismicText.astro';
+import { getPage } from '../prismic.js';
+
+const doc = await getPage('home');
+
+console.log('### doc : ' + JSON.stringify(doc, null, 4));
+---
+
+<Layout
+	title="Docs"
+	description="Some documents">
+	<pre>{doc}</pre>
+
+	<section class="grid place-items-center text-center overflow-hidden mt-9">
+		<h1 class="my-8 text-5xl font-semibold">Title</h1>
+		<section class="intro">
+			<h1 class="latest"><PrismicText content={doc.data.heading} /></h1>
+			<!-- <p>{description}</p> -->
+		</section>
+		<section>
+			<PrismicContent content={doc.data.body1} />
+		</section>
+	</section>
+</Layout>

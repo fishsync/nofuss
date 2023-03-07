@@ -3,7 +3,8 @@
 	"version": "1.0.0",
 	"private": true,
 	"scripts": {
-		"dev": "npx tinacms dev -c 'astro dev'",
+		"cms": "npx tinacms dev -c 'astro dev'",
+		"dev": "astro dev",
 		"start": "npx tinacms dev -c 'astro dev'",
 		"build": "npx tinacms build && astro build",
 		"preview": "astro preview'",
@@ -38,3 +39,4 @@
 		"tinacms": "^1.2.2"
 	}
 }
+
