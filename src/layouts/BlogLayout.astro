@@ -15,7 +15,7 @@ pubDate = pubDate.split('T')[0];
 const ogImageParams = new URLSearchParams({
 	title: JSON.stringify(frontmatter.title),
 }).toString();
-1;
+
 export interface Props {
 	heroImage?: string;
 	imageAlt?: string;
@@ -29,28 +29,6 @@ const defaultMeta = {
 const { heroImage = defaultMeta.image, imageAlt = defaultMeta.imageAlt } = Astro.props as Props;
 
 const classBody = 'scrollbar-thin scrollbar-thumb-zinc-400 scrollbar-track-zinc-300 dark:scrollbar-thumb-zinc-600 dark:scrollbar-track-zinc-800 dark:bg-zinc-900 dark:text-white font-inter selection:bg-blue-500/70 text-xl';
-
-// const getBlock = function (blocks, blockName) {
-// 	if (blockName === 'content') {
-// 		return blocks.map(function (block, i) {
-// 			switch (block._template) {
-// 				case blockName:
-// 					return `${block.body}`;
-// 				default:
-// 					return null;
-// 			}
-// 		});
-// 	} else if (blockName === 'features') {
-// 		return blocks.map(function (block, i) {
-// 			switch (block._template) {
-// 				case blockName:
-// 					return `<ProductFeatures props={block} />`;
-// 				default:
-// 					return null;
-// 			}
-// 		});
-// 	}
-// };
 ---
 
 <!DOCTYPE html>
