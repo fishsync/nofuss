@@ -11,8 +11,7 @@ const metadata = {
 	description: 'Blog Page of NoFuss Template.',
 };
 
-let blogs = await Astro.glob<Frontmatter>(['./blog/*.md', './blog/*.mdx']);
-// let blogs = await Astro.glob<Frontmatter>('../../content/posts/*.md');
+let blogs = await Astro.glob<Frontmatter>('./blog/*.mdx');
 blogs = blogs.sort((a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf());
 ---
 
@@ -27,7 +26,7 @@ blogs = blogs.sort((a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Dat
 				blogs.map((post) => (
 					<BlogCard
 						title={post.frontmatter.title}
-						description={post.frontmatter.description}
+						description={post.frontmatter.blocks[0].body}
 						pubDate={post.frontmatter.pubDate}
 						url={post.url}
 					/>

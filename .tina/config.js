@@ -1,5 +1,7 @@
 import { defineConfig } from 'tinacms';
 
+import { contentBlock, featureBlock, heroBlock } from './config-blocks.js';
+
 // Your hosting provider likely exposes this as an environment variable
 const branch = process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || 'main';
 
@@ -89,9 +91,9 @@ export default defineConfig({
 						required: true,
 					},
 					{
-						label: 'Published',
-						name: 'pubDate',
 						type: 'datetime',
+						name: 'pubDate',
+						label: 'Published Date',
 					},
 					{
 						type: 'string',
@@ -104,6 +106,13 @@ export default defineConfig({
 						name: 'body',
 						label: 'Body',
 						isBody: true,
+					},
+					{
+						type: 'object',
+						list: true,
+						name: 'blocks',
+						label: 'Sections',
+						templates: [heroBlock, featureBlock, contentBlock],
 					},
 				],
 			},

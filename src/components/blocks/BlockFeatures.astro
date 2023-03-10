@@ -1,0 +1,20 @@
+---
+import { getBlockData } from '@/utils/cms-utils.js';
+
+const { blocks } = Astro.props;
+const data = getBlockData(blocks, 'features');
+---
+
+{
+	data && (
+		<section>
+			<ul>
+				{data.map((item) => (
+					<li>
+						{item.title} - {item.text}
+					</li>
+				))}
+			</ul>
+		</section>
+	)
+}
